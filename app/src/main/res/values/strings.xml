@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AccountBook</string>
+    <string name="title_home">账本</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">图表</string>
+    <string name="chart_text_income">累计收入</string>
+    <string name="chart_text_expense">累计支出</string>
+    <string name="chart_button_label_recent_month">近30天</string>
+    <string name="chart_button_label_recent_season">近一季度</string>
+    <string name="chart_button_label_recent_year">近一年</string>
+</resources>

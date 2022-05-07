@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/account_R_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F5F5">
+        <RelativeLayout
+            android:id="@+id/account_R_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff">
+            <Button
+                android:id="@+id/btn_return"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/back"/>
+            <TextView
+                android:id="@+id/account_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记账"
+                android:textSize="22sp"
+                android:layout_centerInParent="true"
+                android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account_R_3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/account_R_2"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/frame">
+
+
+                <Button
+                    android:id="@+id/btn_account_expend"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:background="#F6F5F5"
+                    android:text="支出"
+                    android:textColor="#008577"
+                    android:textSize="21sp" />
+                <Button
+                    android:id="@+id/btn_account_income"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="200dp"
+                    android:background="#F6F5F5"
+                    android:text="收入"
+                    android:textColor="#000000"
+                    android:textSize="21sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account_R_4"
+            android:layout_below="@id/account_R_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/account_R_5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/frame1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金额"
+                    android:textSize="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#333333"/>
+                <TextView
+                    android:id="@+id/tv_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:layout_toLeftOf="@id/et_money"
+                    android:textSize="26dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="#333333"/>
+                <EditText
+                    android:id="@+id/et_money"
+                    android:hint="0.00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:textColorHint="#333333"
+                    android:layout_centerVertical="true"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:background="@null"/>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/account_R_6"
+                android:orientation="horizontal"
+                android:layout_below="@id/account_R_5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:weightSum="9"
+                android:background="@drawable/frame1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="分类"
+                    android:textSize="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="7"
+                    android:textColor="#333333"/>
+
+                <Button
+                    android:id="@+id/btn_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+
+                    android:layout_weight="1.5"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:text="餐饮"
+                    android:textColor="#808080"
+                    android:textSize="18dp" />
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="0.5"
+                    android:layout_toEndOf="@id/btn_none"
+                    android:background="@drawable/next"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_start"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="保存"
+                android:layout_marginTop="450dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

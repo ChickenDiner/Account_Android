@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/label_R_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame1">
+       <RelativeLayout
+                android:id="@+id/label_R_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/frame1">
+                <Button
+                    android:id="@+id/btn_classfication_return"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/back"/>
+                <TextView
+                    android:id="@+id/label_tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分类"
+                    android:textSize="22sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#333333"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/label_R_4"
+            android:layout_below="@id/label_R_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_recylerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f6f5f5">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

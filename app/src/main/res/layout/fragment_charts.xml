@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/text_info_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="clip_vertical|top"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/chart_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/chart_text_income"
+                    android:textColor="@color/colorChartLabel1"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/chart_income_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100.00"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/char_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/chart_text_expense"
+                    android:textColor="@color/colorChartLabel1"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/chart_expense_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chart_toggle_button_group_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/chart_toggle_button">
+
+                <Button
+                    android:id="@+id/chart_toggle_button_month"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/chart_button_label_recent_month" />
+
+                <TextView
+                    android:id="@+id/chart_placeholder_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="|" />
+
+                <Button
+                    android:id="@+id/chart_toggle_button_season"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/chart_button_label_recent_season" />
+
+                <TextView
+                    android:id="@+id/chart_placeholder_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="|" />
+
+                <Button
+                    android:id="@+id/chart_toggle_button_year"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/chart_button_label_recent_year" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="30dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text=" ◼ "
+                            android:id="@+id/chart_line_label_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="收入"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text=" ◼ "
+                            android:id="@+id/chart_line_label_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="支出"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/chart_line_chart"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="200dp"
+                    android:paddingVertical="30dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <lecho.lib.hellocharts.view.PieChartView
+                        android:id="@+id/chart_pie_chart_income"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:layout_marginVertical="14dp" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:id="@+id/chart_pie_labels_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <lecho.lib.hellocharts.view.PieChartView
+                        android:id="@+id/chart_pie_chart_expense"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="14dp" />
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingHorizontal="20dp"
+                        android:id="@+id/chart_pie_labels_expense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
