@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/background1"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="Login in"
+        android:textColor="#00897B"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        />
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_username"
+        android:textColor="#000000"
+        android:hint=" Account"
+        android:maxLines="1"
+        android:layout_marginTop="40dp"
+        />
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:hint=" Password"
+        android:background="@drawable/bg_username"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/bt_1"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/green"
+            android:orientation="horizontal"
+            android:text="Login in" />
+
+        <Button
+            android:id="@+id/bt_2"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green"
+            android:layout_alignParentEnd = "true"
+            android:text="sign up" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
